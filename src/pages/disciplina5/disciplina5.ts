@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ProvaPage } from '../prova/prova';
+import { ServidorProvider } from '../../providers/servidorproviders/servidorproviders';
 
 /**
  * Generated class for the Disciplina5Page page.
@@ -17,17 +18,28 @@ import { ProvaPage } from '../prova/prova';
 export class Disciplina5Page {
   qtd:any;
   nomeD:string ="JAVASCRIPT";
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+  perguntas:any;
+  constructor(public navCtrl: NavController, public navParams: NavParams,public servidor:ServidorProvider) {this.getRetornar()}
+  
+  
   goToProvaPage(){
     this.navCtrl.push (ProvaPage, {
       qtd: this.qtd,
-      nomeD:this.nomeD
+      nomeD:this.nomeD,
+      perguntas:this.perguntas
     });
   }
   ionViewDidLoad() {
     console.log('ionViewDidLoad Disciplina5Page');
   }
+  getRetornar(){
 
+    this.servidor.getPegarjavascript()
+    .subscribe(
+       data => this.perguntas = data,
+       err => console.log(err)
+     );
+    
+
+  }
 }

@@ -15,15 +15,14 @@
 
 <ion-content >
   <h2>Sua prova de {{diciplina}} foi gerada com *{{qtdQ}}* de questões BOA SORTE</h2>
-  <ion-list>
-      <button ion-item *ngFor="let pergunta of perguntas" >
-       <h3>{{ pergunta.perg }}</h3>
-       
-      </button>  
-    </ion-list>
- 
 
 
+
+  <ion-item-group *ngFor="let pergunta of perguntas"> 
+    <ion-item-divider color="light">[ {{pergunta.disciplina}} - {{pergunta.id}} ]  {{pergunta.pergunta}}</ion-item-divider>
+    
+    <ion-item>{{pergunta.resposta}}</ion-item>
+  </ion-item-group>
 
 
 

@@ -19,6 +19,21 @@ export class ServidorProvider {
   }
 
   getPegar(){
-    return this.http.get(this.url+'dados.php').pipe(map(res => res.json()));
+    return this.http.get(this.url+'pergunta.php').pipe(map(res => res.json()));
+  }
+  getPegarPHP(){
+    return this.http.get(this.url+'pergunta-php.php').pipe(map(res => res.json()));
+  }
+  getPegarjavascript(){
+    return this.http.get(this.url+'pergunta-javascript.php').pipe(map(res => res.json()));
+  }
+  getPegarPhayton(){
+    return this.http.get(this.url+'pergunta-phayton.php').pipe(map(res => res.json()));
+  }
+  getPegarJava(){
+    return this.http.get(this.url+'pergunta-java.php').pipe(map(res => res.json()));
+  }
+  getPegarJSON(){
+    return this.http.get(this.url+'pergunta-json.php').pipe(map(res => res.json()));
   }
 }
