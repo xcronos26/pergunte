@@ -12,7 +12,7 @@ import { map } from 'rxjs/operators';
 */
 @Injectable()
 export class ServidorProvider {
-  url:string= "http://localhost/phpp/";
+  url:string= "https://xcronos2.000webhostapp.com/phpp/";
 
   constructor(public http: Http) {
     console.log('Hello ServidorProvider Provider');
