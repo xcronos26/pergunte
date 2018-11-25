@@ -17,7 +17,7 @@ import { ServidorProvider } from '../../providers/servidorproviders/servidorprov
 })
 export class Disciplina5Page {
   qtd:any;
-  nomeD:string ="JAVASCRIPT";
+  nomeD:string ="5";
   perguntas:any;
   constructor(public navCtrl: NavController, public navParams: NavParams,public servidor:ServidorProvider) {this.getRetornar()}
   
@@ -34,7 +34,7 @@ export class Disciplina5Page {
   }
   getRetornar(){
 
-    this.servidor.getPegarjavascript()
+    this.servidor.getPegarJava()
     .subscribe(
        data => this.perguntas = data,
        err => console.log(err)

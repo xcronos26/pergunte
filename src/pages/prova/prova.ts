@@ -18,7 +18,7 @@ import { analyzeAndValidateNgModules } from '@angular/compiler';
 export class ProvaPage {
   nomeDiciplina:any;
   qtdQ:any;
-  diciplina:string;
+  diciplina:any;
   perguntas:any = [];
   questoes:any= [];
 
@@ -38,18 +38,13 @@ export class ProvaPage {
 listarPerguntas(){
   var i = 0;
   do {
+    
       this.perguntas[i] = this.questoes[i];
       
       i++;
   }
   while (i < this.qtdQ);
-  
-
 }
-
-
-
-
   ionViewDidLoad() {
     console.log(this.questoes);
   }

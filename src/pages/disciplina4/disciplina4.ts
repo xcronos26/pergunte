@@ -17,7 +17,7 @@ import { ServidorProvider } from '../../providers/servidorproviders/servidorprov
 })
 export class Disciplina4Page {
   qtd:any;
-  nomeD:string = "JSON";
+  nomeD:string = "4";
   perguntas:any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams,public servidor:ServidorProvider) {this.getRetornar()}
@@ -35,7 +35,7 @@ export class Disciplina4Page {
 
   getRetornar(){
 
-    this.servidor.getPegarJSON()
+    this.servidor.getPegarJava()
     .subscribe(
        data => this.perguntas = data,
        err => console.log(err)

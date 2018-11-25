@@ -17,7 +17,7 @@ import { ServidorProvider } from '../../providers/servidorproviders/servidorprov
 })
 export class Disciplina2Page {
   qtd:any;
-  nomeD:string = "PHP";
+  nomeD:string = "2";
   perguntas:any;
   constructor(public navCtrl: NavController, 
               public navParams: NavParams,
@@ -39,7 +39,7 @@ export class Disciplina2Page {
 
   getRetornar(){
 
-    this.servidor.getPegarPHP()
+    this.servidor.getPegarJava()
     .subscribe(
        data => this.perguntas = data,
        err => console.log(err)

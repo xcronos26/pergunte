@@ -19,9 +19,15 @@
 
 
   <ion-item-group *ngFor="let pergunta of perguntas"> 
-    <ion-item-divider color="light">[ {{pergunta.disciplina}} - {{pergunta.id}} ]  {{pergunta.pergunta}}</ion-item-divider>
+     <div *ngIf= "pergunta.disciplina_id_disciplina == diciplina">
+    <ion-item-divider color="light">[ {{pergunta.disciplina_id_disciplina}}  ]  {{pergunta.enunciado_pergunta}}</ion-item-divider>
     
-    <ion-item>{{pergunta.resposta}}</ion-item>
+    <ion-item>{{pergunta.a_pergunta}}</ion-item>
+    <ion-item>{{pergunta.b_pergunta}}</ion-item>
+    <ion-item>{{pergunta.c_pergunta}}</ion-item>
+    <ion-item>{{pergunta.d_pergunta}}</ion-item>
+    <ion-item>{{pergunta.e_pergunta}}</ion-item>
+    </div>
   </ion-item-group>
 
 

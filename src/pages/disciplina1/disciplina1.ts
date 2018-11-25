@@ -17,7 +17,7 @@ import { ServidorProvider } from '../../providers/servidorproviders/servidorprov
 })
 export class Disciplina1Page {
   qtd:any;
-  nomeD:string = "Java";
+  nomeD:any = "1";
   perguntas:any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams,

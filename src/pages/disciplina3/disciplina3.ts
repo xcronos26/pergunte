@@ -17,7 +17,7 @@ import { ServidorProvider } from '../../providers/servidorproviders/servidorprov
 })
 export class Disciplina3Page {
   qtd:any;
-  nomeD:string = "PHYTON";
+  nomeD:string = "3";
   perguntas:any;
 
   constructor(public navCtrl: NavController, 
@@ -37,7 +37,7 @@ export class Disciplina3Page {
   }
   getRetornar(){
 
-    this.servidor.getPegarPhayton()
+    this.servidor.getPegarJava()
     .subscribe(
        data => this.perguntas = data,
        err => console.log(err)
