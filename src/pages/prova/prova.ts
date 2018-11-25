@@ -26,27 +26,16 @@ export class ProvaPage {
     this.qtdQ = this.navParams.get('qtd');
     this.diciplina = this.navParams.get('nomeD');
     this.questoes = this.navParams.get('perguntas');    
-  
     this.listarPerguntas();
   }
 
-
-
-
-
-
+  
 listarPerguntas(){
-  var i = 0;
-  do {
+  
+      this.perguntas = this.questoes;
     
-      this.perguntas[i] = this.questoes[i];
-      
-      i++;
-  }
-  while (i < this.qtdQ);
 }
   ionViewDidLoad() {
     console.log(this.questoes);
   }
-
 }
