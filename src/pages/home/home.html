@@ -12,11 +12,20 @@
   <br>
 
   <br>
+  
+     
+
+  
   <ion-item>
+    
     <ion-label stacked>Insira seu Nome</ion-label>
     <ion-input [(ngModel)]="NomeU" name="NomeU" type="text" value="{{NomeU}}">{{NomeU}}</ion-input>
   </ion-item>
-  <ion-item>
+
+  <h3>tire uma foto</h3>
+  <img *ngIf="img" [src]="img" width="80" height="80" >
+  <button ion-button color="light" round (click)="TirarFoto()">tirar Foto</button>
+  <ion-item><br><br>
     <ion-label>Selecione seu semestre</ion-label>
     <ion-select [(ngModel)]="notifications" interface="action-sheet">
       <ion-option value="Semestre 1">semestre1</ion-option>

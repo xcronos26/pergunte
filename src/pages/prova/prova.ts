@@ -25,6 +25,7 @@ export class ProvaPage {
   teste:any;
   NomeU:any;
   notifications:any;
+  img="";
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public servidor:ServidorProvider) {
     this.qtdQ = this.navParams.get('qtd');
@@ -32,6 +33,7 @@ export class ProvaPage {
     this.questoes = this.navParams.get('perguntas');    
     this.NomeU = this.navParams.get('NomeU');  
     this.notifications = this.navParams.get('notifications'); 
+    this.img = this.navParams.get('img');
     this.listarPerguntas();
   }
 
@@ -54,7 +56,8 @@ while (i < this.qtdQ);
   this.navCtrl.push (ResultadoPage, {
     qtdQ: this.qtdQ,
     NomeU:this.NomeU,
-    notifications:this.notifications
+    notifications:this.notifications,
+    img:this.img
   });
 }
 

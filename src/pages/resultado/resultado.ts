@@ -23,10 +23,12 @@ export class ResultadoPage {
   qtds:any;
   NomeU:any;
   notifications:any;
+  img="";
   constructor(public navCtrl: NavController, public navParams: NavParams, public servidor:ServidorProvider) {
     this.qtds = this.navParams.get('qtdQ');
     this.NomeU = this.navParams.get('NomeU');  
     this.notifications = this.navParams.get('notifications'); 
+    this.img = this.navParams.get('img');
     
   }
 
@@ -36,13 +38,15 @@ export class ResultadoPage {
   goToProvaPagedenovo(){
     this.navCtrl.push (Disciplina1Page,{
     NomeU:this.NomeU,
-    notifications:this.notifications
+    notifications:this.notifications,
+    img:this.img
     });
   }
   goToinicio(){
     this.navCtrl.push (Home2Page,{
       NomeU:this.NomeU,
-    notifications:this.notifications
+    notifications:this.notifications,
+    img:this.img
     });
   }
   resultadodaprova(){

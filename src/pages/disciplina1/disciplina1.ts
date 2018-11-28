@@ -21,10 +21,12 @@ export class Disciplina1Page {
   perguntas:any;
   NomeU:any;
   notifications:any;
+  img ="";
   constructor(public navCtrl: NavController, public navParams: NavParams,
     public servidor:ServidorProvider) {this.getRetornar()
       this.NomeU = this.navParams.get('NomeU');  
-      this.notifications = this.navParams.get('notifications');      
+      this.notifications = this.navParams.get('notifications');  
+      this.img = this.navParams.get('img');
     }
 
   ionViewDidLoad() {
@@ -36,7 +38,8 @@ export class Disciplina1Page {
       nomeD:this.nomeD,
       perguntas:this.perguntas,
       NomeU:this.NomeU,
-      notifications:this.notifications
+      notifications:this.notifications,
+      img: this.img
       });
   }
 

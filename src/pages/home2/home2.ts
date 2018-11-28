@@ -18,11 +18,13 @@ import { Disciplina1Page } from '../disciplina1/disciplina1';
 export class Home2Page {
   NomeU:any;
   notifications:any;
+  img="";
 
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public servidor:ServidorProvider) {
     this.NomeU = this.navParams.get('NomeU');  
     this.notifications = this.navParams.get('notifications'); 
+    this.img = this.navParams.get('img');
   
   }
 
@@ -32,7 +34,8 @@ export class Home2Page {
   goToDisciplina1Page () {
     this.navCtrl.push (Disciplina1Page,{
       NomeU:this.NomeU,
-      notifications:this.notifications
+      notifications:this.notifications,
+      img:this.img
     });
     }
 
