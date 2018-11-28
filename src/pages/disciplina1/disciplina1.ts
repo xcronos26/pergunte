@@ -19,9 +19,13 @@ export class Disciplina1Page {
   qtd:any;
   nomeD:any = "1";
   perguntas:any;
-
+  NomeU:any;
+  notifications:any;
   constructor(public navCtrl: NavController, public navParams: NavParams,
-    public servidor:ServidorProvider) {this.getRetornar()}
+    public servidor:ServidorProvider) {this.getRetornar()
+      this.NomeU = this.navParams.get('NomeU');  
+      this.notifications = this.navParams.get('notifications');      
+    }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad Disciplina1Page');
@@ -30,7 +34,9 @@ export class Disciplina1Page {
     this.navCtrl.push (ProvaPage, {
       qtd: this.qtd,
       nomeD:this.nomeD,
-      perguntas:this.perguntas
+      perguntas:this.perguntas,
+      NomeU:this.NomeU,
+      notifications:this.notifications
       });
   }
 

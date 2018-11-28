@@ -23,11 +23,15 @@ export class ProvaPage {
   perguntas:any = [];
   questoes:any= [];
   teste:any;
+  NomeU:any;
+  notifications:any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public servidor:ServidorProvider) {
     this.qtdQ = this.navParams.get('qtd');
     this.diciplina = this.navParams.get('nomeD');
     this.questoes = this.navParams.get('perguntas');    
+    this.NomeU = this.navParams.get('NomeU');  
+    this.notifications = this.navParams.get('notifications'); 
     this.listarPerguntas();
   }
 
@@ -43,12 +47,14 @@ while (i < this.qtdQ);
 
 
   ionViewDidLoad() {
-    console.log(this.questoes);
+    console.log(this.questoes,this.NomeU);
   }
 
   goToresult(){
   this.navCtrl.push (ResultadoPage, {
-    qtdQ: this.qtdQ
+    qtdQ: this.qtdQ,
+    NomeU:this.NomeU,
+    notifications:this.notifications
   });
 }
 

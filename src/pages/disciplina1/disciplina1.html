@@ -7,7 +7,7 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>semestre 1</ion-title>
+    <ion-title>{{notifications}}</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -15,7 +15,7 @@
 
 <ion-content>
     <ion-list>
-
+        <p> olá {{NomeU}} você cursa o {{notifications}} quantas Questões você gostaria de fazer ?</p>
         <ion-item>
           <ion-label stacked>Quantidades de questões a serem geradas (MAX:20)</ion-label>
           <ion-input [(ngModel)]="qtd" name="qtdQ" type="number" min="1" max="20"></ion-input>

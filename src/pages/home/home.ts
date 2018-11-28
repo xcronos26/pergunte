@@ -11,12 +11,17 @@ import { Disciplina5Page } from '../disciplina5/disciplina5';
   templateUrl: 'home.html'
 })
 export class HomePage {
+  NomeU:string;
+  notifications:any;
 
   constructor(public navCtrl: NavController) {
 
   }
   goToDisciplina1Page () {
-    this.navCtrl.push (Disciplina1Page);
+    this.navCtrl.push (Disciplina1Page,{
+      NomeU:this.NomeU,
+      notifications:this.notifications
+    });
     }
   goToDisciplina2Page () {
     this.navCtrl.push (Disciplina2Page);
@@ -30,5 +35,7 @@ export class HomePage {
   goToDisciplina5Page () {
     this.navCtrl.push (Disciplina5Page);
     }
+
+    
 
 }
