@@ -22,7 +22,7 @@ export class ProvaPage {
   diciplina:any;
   perguntas:any = [];
   questoes:any= [];
-  enunciado:any;
+  teste:any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public servidor:ServidorProvider) {
     this.qtdQ = this.navParams.get('qtd');
@@ -48,9 +48,7 @@ while (i < this.qtdQ);
 
   goToresult(){
   this.navCtrl.push (ResultadoPage, {
-    enunciado: this.enunciado,
-    
-    questoes:this.questoes
+    qtdQ: this.qtdQ
   });
 }
 

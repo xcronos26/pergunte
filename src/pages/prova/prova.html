@@ -19,8 +19,8 @@
   
 
 
-    <ion-list radio-group *ngFor="let pergunta of perguntas">
-      <ion-list-header>
+    <ion-list radio-group *ngFor="let pergunta of perguntas"> 
+      <ion-list-header >
         {{pergunta.enunciado_pergunta}}
       </ion-list-header>
   
@@ -44,8 +44,11 @@
         <ion-label>{{pergunta.e_pergunta}}</ion-label>
         <ion-radio ></ion-radio>
       </ion-item>
+     
     </ion-list>
 
+
+    
     <button ion-button color="light" round (click)="goToresult()">Enviar</button>
 
  

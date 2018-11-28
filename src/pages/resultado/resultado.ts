@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ServidorProvider } from '../../providers/servidorproviders/servidorproviders';
+import { Disciplina1Page } from '../disciplina1/disciplina1';
 
 /**
  * Generated class for the ResultadoPage page.
@@ -15,23 +16,23 @@ import { ServidorProvider } from '../../providers/servidorproviders/servidorprov
   templateUrl: 'resultado.html',
 })
 export class ResultadoPage {
-  perguntas:any = [];
-  questoes:any= [];
-  enunciado:any=[];
-  resultado:any=[];
-
+  nomeD:any = "1";
+  perguntas:any;
+  qtds:any;
   constructor(public navCtrl: NavController, public navParams: NavParams, public servidor:ServidorProvider) {
-    this.perguntas = this.navParams.get('questoes');   
-    this.resultado = this.navParams.get('enunciado');   
-  
+    this.qtds = this.navParams.get('qtdQ');
+       
+    
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad ResultadoPage');
+    console.log(this.qtds);
   }
-
+  goToProvaPagedenovo(){
+    this.navCtrl.push (Disciplina1Page);
+  }
   resultadodaprova(){
-    
+
 
   }
 
