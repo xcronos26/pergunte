@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ServidorProvider } from '../../providers/servidorproviders/servidorproviders';
 import { analyzeAndValidateNgModules } from '@angular/compiler';
+import { ResultadoPage } from '../resultado/resultado';
 
 /**
  * Generated class for the ProvaPage page.
@@ -21,6 +22,7 @@ export class ProvaPage {
   diciplina:any;
   perguntas:any = [];
   questoes:any= [];
+  enunciado:any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public servidor:ServidorProvider) {
     this.qtdQ = this.navParams.get('qtd');
@@ -43,4 +45,13 @@ while (i < this.qtdQ);
   ionViewDidLoad() {
     console.log(this.questoes);
   }
+
+  goToresult(){
+  this.navCtrl.push (ResultadoPage, {
+    enunciado: this.enunciado,
+    
+    questoes:this.questoes
+  });
+}
+
 }

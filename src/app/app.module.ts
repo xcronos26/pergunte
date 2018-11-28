@@ -14,6 +14,7 @@ import { Disciplina5Page } from '../pages/disciplina5/disciplina5';
 import { ProvaPage } from '../pages/prova/prova';
 import { ServidorProvider } from '../providers/servidorproviders/servidorproviders';
 import { HttpModule } from '@angular/http';
+import { ResultadoPage } from '../pages/resultado/resultado';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { HttpModule } from '@angular/http';
     Disciplina4Page,
     Disciplina5Page,
     ProvaPage,
+    ResultadoPage,
     
   ],
   imports: [
@@ -42,6 +44,7 @@ import { HttpModule } from '@angular/http';
     Disciplina4Page,
     Disciplina5Page,
     ProvaPage,
+    ResultadoPage,
   ],
   providers: [
     StatusBar,
