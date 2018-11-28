@@ -3,10 +3,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ServidorProvider } from '../../providers/servidorproviders/servidorproviders';
 import { Disciplina1Page } from '../disciplina1/disciplina1';
 
-import { Home2Page } from '../home2/home2';
-
 /**
- * Generated class for the ResultadoPage page.
+ * Generated class for the Home2Page page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -14,40 +12,28 @@ import { Home2Page } from '../home2/home2';
 
 @IonicPage()
 @Component({
-  selector: 'page-resultado',
-  templateUrl: 'resultado.html',
+  selector: 'page-home2',
+  templateUrl: 'home2.html',
 })
-export class ResultadoPage {
-  nomeD:any = "1";
-  perguntas:any;
-  qtds:any;
+export class Home2Page {
   NomeU:any;
   notifications:any;
+
+
   constructor(public navCtrl: NavController, public navParams: NavParams, public servidor:ServidorProvider) {
-    this.qtds = this.navParams.get('qtdQ');
     this.NomeU = this.navParams.get('NomeU');  
     this.notifications = this.navParams.get('notifications'); 
-    
+  
   }
 
   ionViewDidLoad() {
-    console.log(this.qtds);
+    console.log(this.NomeU);
   }
-  goToProvaPagedenovo(){
+  goToDisciplina1Page () {
     this.navCtrl.push (Disciplina1Page,{
-    NomeU:this.NomeU,
-    notifications:this.notifications
-    });
-  }
-  goToinicio(){
-    this.navCtrl.push (Home2Page,{
       NomeU:this.NomeU,
-    notifications:this.notifications
+      notifications:this.notifications
     });
-  }
-  resultadodaprova(){
-
-
-  }
+    }
 
 }

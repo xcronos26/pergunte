@@ -15,6 +15,7 @@ import { ProvaPage } from '../pages/prova/prova';
 import { ServidorProvider } from '../providers/servidorproviders/servidorproviders';
 import { HttpModule } from '@angular/http';
 import { ResultadoPage } from '../pages/resultado/resultado';
+import { Home2Page } from '../pages/home2/home2';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { ResultadoPage } from '../pages/resultado/resultado';
     Disciplina5Page,
     ProvaPage,
     ResultadoPage,
+    Home2Page,
     
   ],
   imports: [
@@ -45,6 +47,7 @@ import { ResultadoPage } from '../pages/resultado/resultado';
     Disciplina5Page,
     ProvaPage,
     ResultadoPage,
+    Home2Page,
   ],
   providers: [
     StatusBar,

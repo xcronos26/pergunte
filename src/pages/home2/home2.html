@@ -13,8 +13,8 @@
 
   <br>
   <ion-item>
-    <ion-label stacked>Insira seu Nome</ion-label>
-    <ion-input [(ngModel)]="NomeU" name="NomeU" type="text" value="{{NomeU}}">{{NomeU}}</ion-input>
+    <ion-label stacked>seu Nome e: {{NomeU}}</ion-label>
+
   </ion-item>
   <ion-item>
     <ion-label>Selecione seu semestre</ion-label>
@@ -27,14 +27,6 @@
     </ion-select>
   </ion-item>
   <button ion-button color="light" round (click)="goToDisciplina1Page()">gerar prova</button>
-  <!--
-  <p>Escolha a diciplina:</p><br>
-    <button ion-button color="light" round (click)="goToDisciplina1Page()">semestre 1</button>
-    <button ion-button round (click)="goToDisciplina2Page()">semestre 2</button>
-    <button ion-button color="secondary" round (click)="goToDisciplina3Page()">semestre3</button>
-    <button ion-button color="danger" round (click)="goToDisciplina4Page()">semestre4</button>
-   
-    <br>
-    -->
+
   <p>Estas questoes são sedidas por alunos e professores de provas ja realizadas na instituição</p>
 </ion-content>
