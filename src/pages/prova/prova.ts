@@ -31,10 +31,15 @@ export class ProvaPage {
 
   
 listarPerguntas(){
-  
-      this.perguntas = this.questoes;
-    
+  var i = 0;
+do {
+  this.perguntas[i] = this.questoes[i];
+    i++;
 }
+while (i < this.qtdQ);   
+}
+
+
   ionViewDidLoad() {
     console.log(this.questoes);
   }

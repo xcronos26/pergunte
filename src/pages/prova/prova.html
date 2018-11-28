@@ -14,21 +14,42 @@
 
 
 <ion-content >
-  <h2>Sua prova de {{diciplina}} foi gerada com *{{qtdQ}}* de questões BOA SORTE</h2>
+  <h2>Sua prova do semestre {{diciplina}} foi gerada com *{{qtdQ}}* de questões BOA SORTE</h2>
+
+  
 
 
+    <ion-list radio-group *ngFor="let pergunta of perguntas">
+      <ion-list-header>
+        {{pergunta.enunciado_pergunta}}
+      </ion-list-header>
+  
+      <ion-item>
+        <ion-label>{{pergunta.a_pergunta}}</ion-label>
+        <ion-radio ></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>{{pergunta.b_pergunta}}</ion-label>
+        <ion-radio ></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>{{pergunta.c_pergunta}}</ion-label>
+        <ion-radio ></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>{{pergunta.d_pergunta}}</ion-label>
+        <ion-radio ></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>{{pergunta.e_pergunta}}</ion-label>
+        <ion-radio ></ion-radio>
+      </ion-item>
+    </ion-list>
 
-  <ion-item-group *ngFor="let pergunta of perguntas"> 
-     <div *ngIf= "pergunta.disciplina_id_disciplina == diciplina">
-    <ion-item-divider color="light">[ {{pergunta.disciplina_id_disciplina}}  ]  {{pergunta.enunciado_pergunta}}</ion-item-divider>
-    
-    <ion-item>{{pergunta.a_pergunta}}</ion-item>
-    <ion-item>{{pergunta.b_pergunta}}</ion-item>
-    <ion-item>{{pergunta.c_pergunta}}</ion-item>
-    <ion-item>{{pergunta.d_pergunta}}</ion-item>
-    <ion-item>{{pergunta.e_pergunta}}</ion-item>
-    </div>
-  </ion-item-group>
+    <button ion-button color="light" round (click)="goToDisciplina1Page()">semestre 1</button>
+
+ 
+
 
 
 
