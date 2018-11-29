@@ -1,12 +1,13 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
+  <ion-navbar color="dark">
+    <ion-title text-center>
+      
       Perguntador 3000
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content>
+<ion-content padding>
   <h3>Este é o Gerador de provas</h3>
   <p>a aplicação que vai te ajudar a passar nas provas</p>
   <br>
@@ -22,10 +23,10 @@
     <ion-input [(ngModel)]="NomeU" name="NomeU" type="text" value="{{NomeU}}">{{NomeU}}</ion-input>
   </ion-item>
 
-  <h3>tire uma foto</h3>
-  <img *ngIf="img" [src]="img" width="80" height="80" >
-  <button ion-button color="light" round (click)="TirarFoto()">tirar Foto</button>
-  <ion-item><br><br>
+  <h4>tire uma foto</h4>
+  <img *ngIf="img" [src]="img" width="80" height="80" ><br>
+  <button ion-button color="light" round (click)="TirarFoto()">tirar Foto</button><br><br>
+  <ion-item>
     <ion-label>Selecione seu semestre</ion-label>
     <ion-select [(ngModel)]="notifications" interface="action-sheet">
       <ion-option value="Semestre 1">semestre1</ion-option>
